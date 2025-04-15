@@ -1,6 +1,6 @@
 # rot13-base64
 
-Scripts em Python que utilizam técnicas simples de codificação (como `base64`, `rot13` e `eval`) para esconder e exibir mensagens discretamente.
+Script em Python que utilizam técnicas simples de codificação (como `base64`, `rot13` e `eval`) para esconder e exibir mensagens discretamente.
 
 ## 💡 Objetivo
 
