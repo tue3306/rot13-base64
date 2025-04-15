@@ -1,9 +1,13 @@
 import base64, codecs
-magic = 'aG9vayA9ICJo'
-love = 'qUEjBv8iBQxh'
-god = 'MTY4LjUzLjk2'
-destiny = 'Y3qyLzuio2fv'
-joy = '\x72\x6f\x74\x31\x33'
-trust = eval('\x6d\x61\x67\x69\x63')+eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x6c\x6f\x76\x65\x2c\x20\x6a\x6f\x79\x29')+eval('\x67\x6f\x64')+eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x64\x65\x73\x74\x69\x6e\x79\x2c\x20\x6a\x6f\x79\x29')
-decoded_code = base64.b64decode(eval('\x74\x72\x75\x73\x74'))
-print(codecs.decode('bv','rot_13'))
+magic = '\\x68\\x6f\\x6f\\x6b\\x20\\x3d\\x20\\x22'
+love_rot13 = codecs.encode("Oi, teste teste teste ...", 'rot_13')
+love_base64 = base64.b64encode(love_rot13.encode('utf-8')).decode('utf-8')
+love_hex = ''.join([f'\\x{ord(c):02x}' for c in love_base64])
+love = f"'{love_hex}'"
+god_hex = ''
+god = f"'{god_hex}'"
+destiny_hex = ''
+destiny = f"'{destiny_hex}'"
+joy = "'\\x72\\x6f\\x74\\x31\\x33'"
+trust = eval(f'"{magic}"') + base64.b64decode(bytes.fromhex('{''.join([hex(ord(c))[2:] for c in eval(love)])})).decode('utf-8') + eval(god) + eval(destiny)
+print(trust + '"')
